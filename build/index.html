@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="#">
+    <title>Врамке</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/manrope-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body class="page-body">
+    <div class="wrapper">
+      <header class="main-header header">
+        <nav class="header__navigation">
+          <div class="header__navigation-logo">
+            <picture>
+              <source media="(max-width: 767px)" width="130" height="100" type="image/svg+xml" srcset="img/logo.svg">
+              <source media="(max-width: 1023px)" width="130" height="100" type="image/svg+xml" srcset="img/logo.svg"><img src="img/logo.svg" alt="лого" width="130" height="100">
+            </picture>
+          </div>
+          <div class="header__navigation-wrapper">
+            <ul class="header__navigation-wrapper-list">
+                    <li class="header__navigation-wrapper-item"><a class="header__navigation-wrapper-link text-h-25" href="/">Главная</a></li>
+                    <li class="header__navigation-wrapper-item"><a class="header__navigation-wrapper-link text-h-25" href="/">Каталог</a></li>
+                    <li class="header__navigation-wrapper-item"><a class="header__navigation-wrapper-link text-h-25" href="/">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="header__navigation-search search">
+            <form action="/" method="post">
+              <label for="search"></label>
+              <input type="text" name="search" id="search" maxlength="18">
+              <button type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </nav>
+      </header>
+      <main class="main-container">
+        <section class="main-container__hero hero">
+          <div class="hero__container hero-swiper">
+            <ul class="hero__list swiper-wrapper">
+              <li class="hero__item swiper-slide">
+                <div class="hero__item-content">
+                  <div class="hero__content-block">
+                    <h3>Сделаем принты</h3>
+                    <h4>На пакеты</h4>
+                    <p>Опытные сотрудники учтут все ваши пожелания</p>
+                            <button class="hero__button button text-b18 " type="button">Заказать
+                            </button>
+                  </div>
+                  <div class="hero__image-block">
+                    <picture>
+                      <source media="(max-width: 767px)" width="550" height="550" type="image/webp" srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x">
+                      <source media="(max-width: 1023px)" width="550" height="550" type="image/webp" srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x">
+                      <source type="image/webp" srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x">
+                      <source media="(max-width: 767px)" width="550" height="550" type="image/png" srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x">
+                      <source media="(max-width: 1023px)" width="550" height="550" type="image/png" srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x"><img src="img/hero_bags@1x.png" srcset="img/hero_bags@2x.png 2x" width="550" height="550" alt="/">
+                    </picture>
+                  </div>
+                </div>
+              </li>
+              <li class="hero__item swiper-slide">
+                <div class="hero__item-content">
+                  <div class="hero__content-block">
+                    <h3>Сделаем принты</h3>
+                    <h4>На пакеты</h4>
+                    <p>Опытные сотрудники учтут все ваши пожелания</p>
+                            <button class="hero__button button text-b18 " type="button">Заказать
+                            </button>
+                  </div>
+                  <div class="hero__image-block">
+                    <picture>
+                      <source media="(max-width: 767px)" width="550" height="550" type="image/webp" srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x">
+                      <source media="(max-width: 1023px)" width="550" height="550" type="image/webp" srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x">
+                      <source type="image/webp" srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x">
+                      <source media="(max-width: 767px)" width="550" height="550" type="image/png" srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x">
+                      <source media="(max-width: 1023px)" width="550" height="550" type="image/png" srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x"><img src="img/hero_bags@1x.png" srcset="img/hero_bags@2x.png 2x" width="550" height="550" alt="/">
+                    </picture>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <script src="js/bundle.js"></script>
+    </div>
+  </body>
+</html>
