@@ -5,35 +5,12 @@ body {
   margin: 0;
 }
 
+.wrapper {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: $basic-font;
+}
+
 li {
   list-style: none;
 }
-
-.heading-h3 {
-  font-family: $basic-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-}
-
-.heading-h4 {
-  font-family: $basic-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-}
-
-.text-h-25 {
-  font-family: $basic-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-}
-
-.text-he-25 {
-  font-family: $basic-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-}
-

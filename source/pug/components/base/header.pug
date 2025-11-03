@@ -5,15 +5,15 @@ header.main-header.header
     div.header__navigation-logo
       if isHomePage
         picture
-          source(media="(max-width: 767px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
-          source(media="(max-width: 1023px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
-          img(src="img/logo.svg", alt="лого", width="130", height="100")
+          source(media="(max-width: 767px)", width="130", height="100", type="image/svg+xml", srcset="img/logo_desktop.svg")
+          source(media="(max-width: 1023px)", width="130", height="100", type="image/svg+xml", srcset="img/logo_desktop.svg")
+          img(src="img/logo_desktop.svg", alt="лого", width="330", height="150")
       else
         a.header__navigation-logo(href="index.html")
           picture
-            source(media="(max-width: 767px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
-            source(media="(max-width: 1023px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
-            img(src="img/logo.svg", alt="лого", width="130", height="100")
+            source(media="(max-width: 767px)", width="130", height="100", type="image/svg+xml", srcset="img/logo_desktop.svg")
+            source(media="(max-width: 1023px)", width="130", height="100", type="image/svg+xml", srcset="img/logo_desktop.svg")
+            img(src="img/logo_desktop.svg", alt="лого", width="130", height="100")
     div.header__navigation-wrapper
       ul.header__navigation-wrapper-list
         +navigationWrapperItem('Главная')
@@ -26,3 +26,7 @@ header.main-header.header
         button(type="button")
           svg
             use(xlink:href=`img/icons/sprite.svg#icon-search`)
+    div.header__navigation-button
+      button(type='button')
+        svg
+          use(xlink:href=`img/icons/sprite.svg#wa_icon`)
