@@ -2,7 +2,6 @@
 @use "../common/mixins" as *;
 
 .search {
-
   form {
     position: relative;
   }
@@ -21,9 +20,10 @@
     outline: none;
     padding: 10px;
     box-sizing: border-box;
-    color: $color-text-blue;
+    color: $color-text-black;
     background-color: transparent;
     transition: opacity 0.3s ease, visibility 0.3s ease, width 0.6s ease, background-color 0.6s ease;
+    cursor: pointer;
   }
 
   button {
@@ -41,6 +41,10 @@
     border: none;
     cursor: pointer;
     box-sizing: border-box;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   svg {
@@ -55,6 +59,18 @@
     opacity: 1;
     visibility: visible;
     width: 356px;
-    background-color: $color-background-blue-alice;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: $color-background-white;
+
+    &::placeholder {
+      color: $color-text-white;
+    }
+  }
+
+  button svg {
+    color: $color-background-white;
   }
 }

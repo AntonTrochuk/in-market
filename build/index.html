@@ -26,9 +26,9 @@
           </div>
           <div class="header__navigation-wrapper">
             <ul class="header__navigation-wrapper-list">
-                    <li class="header__navigation-wrapper-item"><a class="header__navigation-wrapper-link" href="/">Главная</a></li>
-                    <li class="header__navigation-wrapper-item"><a class="header__navigation-wrapper-link" href="/">Каталог</a></li>
-                    <li class="header__navigation-wrapper-item"><a class="header__navigation-wrapper-link" href="/">Контакты</a></li>
+                    <li class="wrapper-item"><a class="header__navigation-wrapper-link" href="/"><span>Главная</span></a></li>
+                    <li class="wrapper-item"><a class="header__navigation-wrapper-link" href="/"><span>Каталог</span></a></li>
+                    <li class="wrapper-item"><a class="header__navigation-wrapper-link" href="/"><span>Контакты</span></a></li>
             </ul>
           </div>
           <div class="header__navigation-search search">
@@ -42,17 +42,22 @@
               </button>
             </form>
           </div>
-          <div class="header__navigation-button">
-            <button type="button">
-              <svg>
-                <use xlink:href="img/icons/sprite.svg#wa_icon"></use>
-              </svg>
-            </button>
-          </div>
         </nav>
       </header>
       <main class="main-container">
-        <section class="main-container__hero hero"></section>
+        <section class="main-container__hero hero">
+          <div class="hero__container">
+            <div class="hero__description">
+              <h3>Цены, которые привлекают</h3><span>Текст</span>
+              <p>Текст</p>
+            </div><a class="hero__description-link" href="/"><span>Связаться</span></a>
+            <div class="hero__slider-container hero-swiper">
+              <ul class="hero__slider-list swiper-wrapper">
+                <li class="hero__slider-item swiper-slide"></li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
       <script src="js/bundle.js"></script>
     </div>

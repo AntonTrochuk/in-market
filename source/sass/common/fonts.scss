@@ -1,9 +1,9 @@
 @use "./mixins" as *;
 
-@include font-face("manrope-100", 100, normal, "../fonts/manrope-100");
-@include font-face("manrope-200", 200, normal, "../fonts/manrope-200");
-@include font-face("manrope-400", 400, normal, "../fonts/manrope-400");
-@include font-face("manrope-500", 500, normal, "../fonts/manrope-500");
-@include font-face("manrope-600", 600, normal, "../fonts/manrope-600");
-@include font-face("manrope-700", 700, normal, "../fonts/manrope-700");
-@include font-face("manrope-800", 800, normal, "../fonts/manrope-800");
+@include font-face("Manrope", 100, normal, "../fonts/manrope-100");
+@include font-face("Manrope", 200, normal, "../fonts/manrope-200");
+@include font-face("Manrope", 400, normal, "../fonts/manrope-400");
+@include font-face("Manrope", 500, normal, "../fonts/manrope-500");
+@include font-face("Manrope", 600, normal, "../fonts/manrope-600");
+@include font-face("Manrope", 700, normal, "../fonts/manrope-700");
+@include font-face("Manrope", 800, normal, "../fonts/manrope-800");

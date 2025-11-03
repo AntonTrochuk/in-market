@@ -15,12 +15,4 @@
   overflow: hidden;
   z-index: 1;
   position: relative;
-  color: $color-text-white;
-  background-color: $color-background-blue;
-  transition: color 0.4s ease, background-color 0.4s ease;
-
-  &:hover {
-    color: $color-background-blue;
-    background-color: $color-text-white;
-  }
 }

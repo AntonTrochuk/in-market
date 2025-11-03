@@ -1,6 +1,7 @@
 mixin navigationWrapperItem(text)
-  li.header__navigation-wrapper-item
-    a(class=`header__navigation-wrapper-link`, href="/")= text
+  li.wrapper-item
+    a(class=`header__navigation-wrapper-link`, href="/")
+      span= text
 
 mixin button(text, className, type, disabled)
   button(

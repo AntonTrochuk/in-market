@@ -32,30 +32,20 @@
 
 .header__navigation-wrapper-link {
   text-decoration: none;
-  color: $color-text-blue;
+  color: $color-text-black;
   padding: 20px 0;
   border-bottom: 2px solid transparent;
-  transition: border-bottom-color 0.4s ease;
   box-sizing: border-box;
+  transition: border-bottom-color 0.8s ease, color 0.4s ease;
+
+  span {
+    font-size: 23px;
+  }
 
   &:hover {
-    border-bottom-color: $color-background-blue;
+    border-bottom-color: $color-background-dark-blue;
+    color: $color-background-dark-blue;
   }
 }
 
-.header__navigation-button {
-  button {
-    background-color: transparent;
-    border: none;
-    display: block;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-  }
 
-  svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-}
