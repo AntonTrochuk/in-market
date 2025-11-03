@@ -1,0 +1,26 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins" as *;
+
+.button {
+  width: 327px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $basic-font;
+  font-style: normal;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  color: $color-text-white;
+  background-color: $color-background-blue;
+  transition: color 0.4s ease, background-color 0.4s ease;
+
+  &:hover {
+    color: $color-background-blue;
+    background-color: $color-text-white;
+  }
+}

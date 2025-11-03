@@ -1,0 +1,46 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins" as *;
+
+.header {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.header__navigation-logo {
+  picture {
+    display: flex;
+  }
+}
+
+.header__navigation-search {
+  margin: 0 0 0 auto;
+}
+
+.header__navigation-wrapper-list {
+  max-width: 1000px;
+  margin: 0;
+  padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+
+.header__navigation-wrapper-link {
+  text-decoration: none;
+  color: $color-text-blue;
+  padding: 20px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.4s ease;
+  box-sizing: border-box; // ← Добавьте это
+
+  &:hover {
+    border-bottom-color: $color-background-blue;
+  }
+}

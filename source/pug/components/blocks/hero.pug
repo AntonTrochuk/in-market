@@ -1,0 +1,101 @@
+include /components/mixins/mixins.pug
+
+section.main-container__hero.hero
+  div.hero__container.hero-swiper
+    ul.hero__list.swiper-wrapper
+      li.hero__item.swiper-slide
+        div.hero__item-content
+          div.hero__content-block
+            h3 Сделаем принты
+            h4 На пакеты
+            p Опытные сотрудники учтут все ваши пожелания
+            +button('Заказать', 'hero__button', 'button')
+          div.hero__image-block
+            picture
+              source(
+                media="(max-width: 767px)",
+                width="550",
+                height="550",
+                type="image/webp",
+                srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x"
+              )
+              source(
+                media="(max-width: 1023px)",
+                width="550",
+                height="550",
+                type="image/webp",
+                srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x"
+              )
+              source(
+                type="image/webp",
+                srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x"
+              )
+              source(
+                media="(max-width: 767px)",
+                width="550",
+                height="550",
+                type="image/png",
+                srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x"
+              )
+              source(
+                media="(max-width: 1023px)",
+                width="550",
+                height="550",
+                type="image/png",
+                srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x"
+              )
+              img(
+                src="img/hero_bags@1x.png",
+                srcset="img/hero_bags@2x.png 2x",
+                width="550",
+                height="550",
+                alt="/"
+              )
+      li.hero__item.swiper-slide
+        div.hero__item-content
+          div.hero__content-block
+            h3 Сделаем принты
+            h4 На пакеты
+            p Опытные сотрудники учтут все ваши пожелания
+            +button('Заказать', 'hero__button', 'button')
+          div.hero__image-block
+            picture
+              source(
+                media="(max-width: 767px)",
+                width="550",
+                height="550",
+                type="image/webp",
+                srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x"
+              )
+              source(
+                media="(max-width: 1023px)",
+                width="550",
+                height="550",
+                type="image/webp",
+                srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x"
+              )
+              source(
+                type="image/webp",
+                srcset="img/hero_bags@1x.webp 1x, img/hero_bags@2x.webp 2x"
+              )
+              source(
+                media="(max-width: 767px)",
+                width="550",
+                height="550",
+                type="image/png",
+                srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x"
+              )
+              source(
+                media="(max-width: 1023px)",
+                width="550",
+                height="550",
+                type="image/png",
+                srcset="img/hero_bags@1x.png 1x, img/hero_bags@2x.png 2x"
+              )
+              img(
+                src="img/hero_bags@1x.png",
+                srcset="img/hero_bags@2x.png 2x",
+                width="550",
+                height="550",
+                alt="/"
+              )

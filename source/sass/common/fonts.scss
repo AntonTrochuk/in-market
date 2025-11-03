@@ -1,0 +1,10 @@
+@use "./mixins" as *;
+
+@include font-face("Songer-g", 400, normal, "../fonts/songer-g-400");
+@include font-face("Songer-g", 500, normal, "../fonts/songer-g-500");
+@include font-face("Songer-g", 700, normal, "../fonts/songer-g-700");
+@include font-face("Songer-g", 800, normal, "../fonts/songer-g-800");
+@include font-face("Songer-se", 400, normal, "../fonts/songer-se-400");
+@include font-face("Songer-se", 500, normal, "../fonts/songer-se-500");
+@include font-face("Songer-se", 700, normal, "../fonts/songer-se-700");
+@include font-face("Songer-se", 800, normal, "../fonts/songer-se-800");

@@ -1,0 +1,23 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="#")
+    title Врамке
+    link(rel="stylesheet", href="css/style.min.css")
+    link(rel="preload", href="fonts/manrope-medium.woff2", type="font/woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/manrope-bold.woff2", type="font/woff2", as="font", crossorigin="anonymous")
+    link(rel="icon", type="image/x-icon", href="favicon.ico")
+    link(rel="icon", type="image/svg+xml", href="favicon/favicon.svg")
+    link(rel="apple-touch-icon", href="favicon/apple-touch-icon.png")
+    link(rel="manifest", href="manifest.webmanifest")
+  body.page-body
+    div.wrapper
+      block vars
+      block header
+      block content
+      block footer
+      script(src="js/bundle.js")
+

@@ -1,0 +1,10 @@
+mixin navigationWrapperItem(text)
+  li.header__navigation-wrapper-item
+    a(class=`header__navigation-wrapper-link text-h-25`, href="/")= text
+
+mixin button(text, className, type, disabled)
+  button(
+    class=`${className} button text-b18 `
+    type=`${type}`
+    disabled= disabled)= text
+    block

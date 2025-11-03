@@ -1,0 +1,28 @@
+include /components/mixins/mixins.pug
+
+header.main-header.header
+  nav.header__navigation
+    div.header__navigation-logo
+      if isHomePage
+        picture
+          source(media="(max-width: 767px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
+          source(media="(max-width: 1023px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
+          img(src="img/logo.svg", alt="лого", width="130", height="100")
+      else
+        a.header__navigation-logo(href="index.html")
+          picture
+            source(media="(max-width: 767px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
+            source(media="(max-width: 1023px)", width="130", height="100", type="image/svg+xml", srcset="img/logo.svg")
+            img(src="img/logo.svg", alt="лого", width="130", height="100")
+    div.header__navigation-wrapper
+      ul.header__navigation-wrapper-list
+        +navigationWrapperItem('Главная')
+        +navigationWrapperItem('Каталог')
+        +navigationWrapperItem('Контакты')
+    div.header__navigation-search.search
+      form(action="/",  method="post")
+        label(for="search")
+        input(type="text", name="search", id="search", maxlength="18")
+        button(type="button")
+          svg
+            use(xlink:href=`img/icons/sprite.svg#icon-search`)
