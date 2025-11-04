@@ -7,3 +7,38 @@ import 'swiper/css/scrollbar';
 
 searchActive ();
 
+
+const heroSwiper = document.querySelector('.hero-swiper');
+const heroSlider = new Swiper(heroSwiper, {
+ modules: [Navigation, Scrollbar],
+  loop: true,
+  speed: 500,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      allowTouchMove: true,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+  },
+
+  navigation: {
+    nextEl: '.programs__button--next',
+    prevEl: '.programs__button--prev',
+    disabledClass: 'disabled',
+  },
+});
+
+heroSlider.update();
