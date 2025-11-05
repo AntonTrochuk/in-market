@@ -2,6 +2,8 @@
 @use "../common/mixins" as *;
 
 .footer {
+  max-width: 1540px;
+  margin: 0 auto;
   background-color: $color-background-black;
   margin-bottom: auto;
   display: flex;

@@ -1,0 +1,14 @@
+extends /layouts/default.pug
+
+block vars
+  - var isHomePage = false
+  - var title = "Корзина"
+
+block header
+  include /components/base/header.pug
+
+block content
+  main.main-container__basket
+
+block footer
+  include /components/base/footer.pug

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="#">
+    <title>Врамке</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- link(rel="preload", href="fonts/manrope-medium.woff2", type="font/woff2", as="font", crossorigin="anonymous")-->
+    <!-- link(rel="preload", href="fonts/manrope-bold.woff2", type="font/woff2", as="font", crossorigin="anonymous")-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body class="page-body">
+    <div class="wrapper">
+      <header class="main-header header">
+        <nav class="header__navigation">
+          <div class="header__navigation-logo"><a class="header__navigation-logo" href="index.html">
+              <picture>
+                <source media="(max-width: 767px)" width="130" height="100" type="image/svg+xml" srcset="img/logo_desktop.svg">
+                <source media="(max-width: 1023px)" width="130" height="100" type="image/svg+xml" srcset="img/logo_desktop.svg"><img src="img/logo_desktop.svg" alt="лого" width="330" height="150">
+              </picture></a>
+          </div>
+          <div class="header__navigation-wrapper">
+            <ul class="header__navigation-wrapper-list">
+                    <li class="wrapper-item"><a class="header__navigation-wrapper-link" href="/"><span>Главная</span></a></li>
+                    <li class="wrapper-item"><a class="header__navigation-wrapper-link" href="/"><span>Каталог</span></a></li>
+                    <li class="wrapper-item"><a class="header__navigation-wrapper-link" href="/"><span>Контакты</span></a></li>
+            </ul>
+          </div>
+          <div class="header__navigation-search search">
+            <form action="/" method="post">
+              <label for="search"></label>
+              <input type="text" name="search" id="search" maxlength="18">
+              <button type="button">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="header__navigation-basket"><a href="basket.html"><img src="img/shopping_basket.png" width="40" height="40" alt=""><span>2</span></a></div>
+          <ul class="header__navigation-social-list">
+            <li class="header__navigation-social-item"><a class="header__navigation-social-link" href=""><img src="img/telegram_icon.svg" width="40" height="40" alt=""></a></li>
+            <li class="header__navigation-social-item"><a class="header__navigation-social-link" href=""><img src="img/whatsapp_icon.svg" width="40" height="40" alt=""></a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main-container__basket"></main>
+      <footer class="main-footer footer">
+        <div class="footer__container">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="/"><span>О нас</span></a></li>
+            <li class="footer__item"><a href="/"><span>Работа у нас</span></a></li>
+            <li class="footer__item"><a href="/"><span>Наши клиенты</span></a></li>
+          </ul>
+        </div>
+      </footer>
+      <script src="js/bundle.js"></script>
+    </div>
+  </body>
+</html>

@@ -13,7 +13,7 @@ header.main-header.header
           picture
             source(media="(max-width: 767px)", width="130", height="100", type="image/svg+xml", srcset="img/logo_desktop.svg")
             source(media="(max-width: 1023px)", width="130", height="100", type="image/svg+xml", srcset="img/logo_desktop.svg")
-            img(src="img/logo_desktop.svg", alt="лого", width="130", height="100")
+            img(src="img/logo_desktop.svg", alt="лого", width="330", height="150")
     div.header__navigation-wrapper
       ul.header__navigation-wrapper-list
         +navigationWrapperItem('Главная')
@@ -27,7 +27,7 @@ header.main-header.header
           svg
             use(xlink:href=`img/icons/sprite.svg#icon-search`)
     div.header__navigation-basket
-      a(href="/")
+      a(href="basket.html")
         img(src="img/shopping_basket.png", width="40", height="40", alt="")
         span 2
     ul.header__navigation-social-list
