@@ -9,7 +9,6 @@ import 'swiper/css/scrollbar';
 searchActive ();
 afterClicking ();
 
-
 const heroSwiper = document.querySelector('.hero-swiper');
 const heroSlider = new Swiper(heroSwiper, {
  modules: [Navigation, Scrollbar],
