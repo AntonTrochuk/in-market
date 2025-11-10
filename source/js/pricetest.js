@@ -201,4 +201,4 @@ document.addEventListener('click', e => {
 });
 
 // === Экспорт ===
-export { priceTest, viewItemBasket, updateBasketDisplay };
+

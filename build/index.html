@@ -42,7 +42,7 @@
               </button>
             </form>
           </div>
-          <div class="header__navigation-basket"><a class="header__navigation-basket-link" href="basket.html"><img src="img/shopping_basket.png" width="40" height="40" alt=""><span class="header__navigation-basket-text">2</span></a></div>
+          <div class="header__navigation-basket"><a class="header__navigation-basket-link" href="#"><img src="img/shopping_basket.png" width="40" height="40" alt=""><span class="header__navigation-basket-text">2</span></a></div>
           <ul class="header__navigation-social-list">
             <li class="header__navigation-social-item"><a class="header__navigation-social-link" href=""><img src="img/telegram_icon.svg" width="40" height="40" alt=""></a></li>
             <li class="header__navigation-social-item"><a class="header__navigation-social-link" href=""><img src="img/whatsapp_icon.svg" width="40" height="40" alt=""></a></li>
@@ -200,6 +200,34 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="main-container__basket basket">
+          <div class="basket__container">
+            <h2>Корзина </h2>
+            <div class="basket__content-block">
+              <ul class="basket__list card">
+                <li class="card__item card__item--basket" data-article="001"><img src="img/popular1@1x.jpg" srcset="img/popular1@1x.jpg 2x" alt="/">
+                  <div class="card__content card__content--basket">
+                    <div class="card__item-text card__item-text--basket">
+                      <h5>Внешний акумулятор</h5>
+                    </div>
+                    <div class="card__item-price card__item-price--basket"><span class="card__item-price-value">700р</span>
+                      <button class="card__item-price-button" type="button">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#shopping_basket"></use>
+                        </svg>
+                      </button>
+                      <div class="card__item-price-button-block button-click">
+                        <button class="button-click__less"><span>-</span></button><span class="button-click__text">0</span>
+                        <button class="button-click__more"><span>+</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="basket__price-block"><a class="basket__price-link" href="/"><span>Оформить заказ</span></a></div>
           </div>
         </section>
       </main>

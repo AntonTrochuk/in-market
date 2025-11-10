@@ -173,4 +173,3 @@ const afterClicking = () => {
   updatingProperties(); // Инициализируем общую сумму при загрузке
 };
 
-export { afterClicking };

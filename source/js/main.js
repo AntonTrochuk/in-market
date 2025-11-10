@@ -1,6 +1,5 @@
 import { searchActive } from './search.js';
-import {afterClicking} from './price-button.js';
-import { priceTest, viewItemBasket, updateBasketDisplay } from './pricetest.js';
+import {basket, openBasket} from './basket.js';
 import Swiper from 'swiper';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
@@ -8,10 +7,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 
 searchActive ();
-//afterClicking ();
-priceTest();
-viewItemBasket();
-updateBasketDisplay();
+
+basket();
+openBasket();
 
 const heroSwiper = document.querySelector('.hero-swiper');
 const heroSlider = new Swiper(heroSwiper, {

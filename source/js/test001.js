@@ -127,7 +127,7 @@ const priceTest = () => {
 
     setTimeout(() => {
       resetClickPriceButton();
-    }, 600000);
+    },     );
   });
 };
 
