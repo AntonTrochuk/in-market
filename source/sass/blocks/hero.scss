@@ -28,11 +28,11 @@
   background-color: $color-background-black;
   color: $color-text-white;
   flex-grow: 1;
-  padding: 8%;
+  padding: 7%;
   border-radius: 16px;
 
   h3 {
-    font-size: 43px;
+    font-size: 40px;
     margin: 0 0 35px 0;
   }
 
@@ -53,7 +53,7 @@
   background-color: $color-background-dark-blue;
   color: $color-text-white;
   border-radius: 16px;
-  padding: 10%;
+  padding: 6%;
   text-align: center;
 
   span {
@@ -75,4 +75,9 @@
 
 .hero__slider-item {
   cursor: pointer;
+
+  picture {
+    display: flex;
+    height: 100%;
+  }
 }
