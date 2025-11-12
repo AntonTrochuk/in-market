@@ -1,0 +1,20 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins" as *;
+
+.running-line__container {
+    background-color: $color-background-dark-blue;
+    display: flex;
+    align-items: center;
+
+    h3 {
+        color: $color-text-white;
+        margin: 0;
+        padding: 3% 0;
+        font-size: 30px;
+        white-space: nowrap;
+    }
+
+    marquee {
+        width: 100%;
+    }
+}
