@@ -5,6 +5,10 @@
   width: 320px;
   height: 600px;
   box-sizing: border-box;
+  border: 1px solid #a39d9d;
+  border-radius: 16px;
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.28);
+
 
   picture {
     display: flex;
@@ -36,7 +40,6 @@
 }
 
 .card__content {
-  border: 1px solid #a39d9d;
   border-top: none;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;

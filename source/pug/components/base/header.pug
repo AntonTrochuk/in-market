@@ -16,9 +16,9 @@ header.main-header.header
             img(src="img/logo_desktop.svg", alt="лого", width="330", height="150")
     div.header__navigation-wrapper
       ul.header__navigation-wrapper-list
-        +navigationWrapperItem('Главная')
-        +navigationWrapperItem('Каталог')
-        +navigationWrapperItem('Контакты')
+        +navigationWrapperItem('Главная', 'index.html')
+        +navigationWrapperItem('Каталог', 'catalog.html')
+        +navigationWrapperItem('Контакты', '/')
     div.header__navigation-search.search
       form(action="/",  method="post")
         label(for="search")
@@ -31,9 +31,5 @@ header.main-header.header
         img(src="img/shopping_basket.png", width="40", height="40", alt="")
         span.header__navigation-basket-text 2
     ul.header__navigation-social-list
-      li.header__navigation-social-item
-        a.header__navigation-social-link(href="")
-          img(src="img/telegram_icon.svg", width="40", height="40", alt="")
-      li.header__navigation-social-item
-        a.header__navigation-social-link(href="")
-          img(src="img/whatsapp_icon.svg", width="40", height="40", alt="")
+      +navigationSocialItem('telegramm', 'https://t.me/inmarket30')
+      +navigationSocialItem('watsapp', 'https://wa.me/79608642028')

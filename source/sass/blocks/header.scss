@@ -85,4 +85,18 @@
 
 .header__navigation-social-link {
   display: flex;
+  transition: all 0.4s ease-in-out;
+  border-radius: 20px;
+  overflow: hidden;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    box-shadow: 2px 0px 8px #27A6E5;
+    border-radius: 20px;
+    scale: 1.1;
+  }
 }

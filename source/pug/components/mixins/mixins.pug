@@ -1,6 +1,6 @@
-mixin navigationWrapperItem(text)
+mixin navigationWrapperItem(text, link)
   li.wrapper-item
-    a(class=`header__navigation-wrapper-link`, href="/")
+    a(class=`header__navigation-wrapper-link`, href= link)
       span= text
 
 mixin button(text, className, type, disabled)
@@ -9,3 +9,57 @@ mixin button(text, className, type, disabled)
     type=`${type}`
     disabled= disabled)= text
     block
+
+mixin navigationSocialItem(name, link)
+  li.header__navigation-social-item
+    a.header__navigation-social-link(href= link, target="_blank")
+      svg
+        use(xlink:href=`img/icons/sprite.svg#icon_${name}`)
+
+mixin card(article, imageName, title, text, price)
+  li.card__item(data-article= article)
+    picture
+      source(
+        media="(max-width: 767px)",
+        type="image/webp",
+        srcset=`img/${imageName}@1x.webp 1x, img/${imageName}@2x.webp 2x`
+      )
+      source(
+        media="(max-width: 1023px)",
+        type="image/webp",
+        srcset=`img/${imageName}@1x.webp 1x, img/${imageName}@2x.webp 2x`
+      )
+      source(
+        type="image/webp",
+        srcset=`img/${imageName}@1x.webp 1x, img/${imageName}@2x.webp 2x`
+      )
+      source(
+        media="(max-width: 767px)",
+        type="image/jpg",
+        srcset=`img/${imageName}@1x.jpg 1x, img/${imageName}@2x.jpg 2x`
+      )
+      source(
+        media="(max-width: 1023px)",
+        type="image/jpg",
+        srcset=`img/${imageName}@1x.jpg 1x, img/${imageName}@2x.jpg 2x`
+      )
+      img(
+        src=`img/${imageName}@1x.jpg`,
+        srcset=`img/${imageName}@1x.jpg 2x`,
+        alt="/"
+      )
+    div.card__content
+      div.card__item-text
+        h5= title
+        p= text
+      div.card__item-price
+        span.card__item-price-value= price
+        button.card__item-price-button(type="button")
+          svg
+            use(xlink:href=`img/icons/sprite.svg#shopping_basket`)
+        div.card__item-price-button-block.button-click
+          button.button-click__less
+            span -
+          span.button-click__text 0
+          button.button-click__more
+            span +

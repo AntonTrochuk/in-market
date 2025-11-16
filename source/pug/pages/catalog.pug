@@ -1,0 +1,15 @@
+extends /layouts/default.pug
+
+block vars
+  - var isHomePage = false
+  - var title = "Каталог"
+
+block header
+  include /components/base/header.pug
+
+block content
+  main.main-container__catalog
+
+
+block footer
+  include /components/base/footer.pug
