@@ -1,7 +1,6 @@
-// basket.js
-
 const basketButtonDOMEl = document.querySelector('.header__navigation-basket-link');
 const basketMainDOMEl = document.querySelector('.basket');
+const basketContainerDOMEl = document.querySelector('.basket__container');
 const cardsDOMEl = document.querySelectorAll('.card__item');
 const basketListDOMEl = document.querySelector('.basket__list');
 
@@ -69,6 +68,68 @@ const resetCardState = () => {
     localStorage.removeItem('cardProperty');
 };
 
+// ====== ФУНКЦИИ ДЛЯ WHATSAPP ======
+
+const sendOrderToWhatsApp = () => {
+    const basketItems = basketListDOMEl.querySelectorAll('.card__item--basket');
+
+    // Проверяем, есть ли товары в корзине
+    if (basketItems.length === 0) {
+        alert('Корзина пуста!');
+        return;
+    }
+
+    let message = 'Здравствуйте! Хочу сделать заказ:\n\n';
+    let total = 0;
+
+    basketItems.forEach((item, index) => {
+        const productName = item.querySelector('.card__item-text h5')?.textContent || 'Товар';
+        const price = item.querySelector('.card__item-price-value')?.textContent || '0₽';
+        const quantity = item.querySelector('.button-click__text--in-basket')?.textContent || '1';
+
+        const priceNumber = parseInt(price.replace(/[^\d]/g, '')) || 0;
+        const itemTotal = priceNumber * parseInt(quantity);
+        total += itemTotal;
+
+        message += `${index + 1}. ${productName}\n`;
+        message += `   Кол-во: ${quantity} шт.\n`;
+        message += `   Цена: ${price}\n`;
+        message += `   Сумма: ${itemTotal}₽\n\n`;
+    });
+
+    message += `ИТОГО: ${total}₽\n\n`;
+    message += `Дата: ${new Date().toLocaleString('ru-RU')}`;
+
+    // Кодируем сообщение для URL
+    const encodedMessage = encodeURIComponent(message);
+
+    const phoneNumber = '79805433206';
+
+    // Открываем WhatsApp
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+};
+
+const addSendButtonToBasket = () => {
+    let sendButton = basketContainerDOMEl.querySelector('.basket__send-button');
+
+    if (!sendButton) {
+        sendButton = document.createElement('button');
+        sendButton.className = 'basket__send-button';
+        sendButton.textContent = 'Отправить заказ в WhatsApp';
+        sendButton.type = 'button';
+
+        sendButton.addEventListener('click', sendOrderToWhatsApp);
+        basketContainerDOMEl.appendChild(sendButton);
+    }
+};
+
+const removeSendButtonFromBasket = () => {
+    const sendButton = basketContainerDOMEl.querySelector('.basket__send-button');
+    if (sendButton) {
+        sendButton.remove();
+    }
+};
+
 // ====== ОСНОВНАЯ ЛОГИКА КОРЗИНЫ ======
 
 const basket = () => {
@@ -93,7 +154,7 @@ const basket = () => {
         }
     }
 
-    // Обновление содержимого корзины (без дерганий)
+    // Обновление содержимого корзины (что бы когда обновляется кол-во товара не дергалось)
     const cardInBasket = () => {
         if (!basketListDOMEl) {
             console.error('Элемент basket__list не найден');
@@ -102,14 +163,14 @@ const basket = () => {
 
         // Сохраняем текущее состояние открытых элементов
         const currentItems = Array.from(basketListDOMEl.children);
-        
+
         Object.entries(cardProperty).forEach(([article, product]) => {
             const quantity = parseInt(product.quantity) || 0;
 
             if (quantity > 0) {
                 // Ищем существующий элемент
                 const existingItem = currentItems.find(item => item.dataset.article === article);
-                
+
                 if (existingItem) {
                     // Обновляем только количество и цену существующего элемента
                     const quantityElement = existingItem.querySelector('.button-click__text--in-basket');
@@ -156,6 +217,14 @@ const basket = () => {
                 item.remove();
             }
         });
+
+        // Показываем или скрываем кнопку отправки
+        const hasItems = basketListDOMEl.querySelectorAll('.card__item--basket').length > 0;
+        if (hasItems) {
+            addSendButtonToBasket();
+        } else {
+            removeSendButtonFromBasket();
+        }
     };
 
     // Обновление количества в карточке на странице
@@ -173,7 +242,7 @@ const basket = () => {
             const priceButton = cardItem.querySelector('.card__item-price-button');
             const priceBlock = priceButton?.closest('.card__item-price');
             const buttonClick = priceBlock?.querySelector('.button-click');
-            
+
             priceButtonClickOff(priceButton, buttonClick, buttonText);
             localStorage.setItem(`clickPriceButton_${article}`, 'false');
         }
@@ -222,7 +291,7 @@ const basket = () => {
                 if (cardProperty[cardArticle]) {
                     cardProperty[cardArticle].quantity = count.toString();
                 }
-                
+
                 // Синхронизируем количество везде
                 updateCardQuantity(cardArticle, count);
                 saveCardProperty();
@@ -232,7 +301,7 @@ const basket = () => {
                 // Удаляем товар при количестве 0
                 delete cardProperty[cardArticle];
                 localStorage.setItem(`clickPriceButton_${cardArticle}`, 'false');
-                
+
                 // Синхронизируем состояние
                 updateCardQuantity(cardArticle, 0);
                 saveCardProperty();
@@ -249,15 +318,15 @@ const basket = () => {
             if (!cardItem) return;
             const cardArticle = cardItem.dataset.article;
             const buttonText = cardItem.querySelector('.button-click__text');
-            
+
             let count = Number(cardProperty[cardArticle]?.quantity || 1);
             count++;
-            
+
             // Обновляем в cardProperty
             if (cardProperty[cardArticle]) {
                 cardProperty[cardArticle].quantity = count.toString();
             }
-            
+
             // Синхронизируем количество везде
             updateCardQuantity(cardArticle, count);
             saveCardProperty();
@@ -271,10 +340,11 @@ const basket = () => {
     valueBasket();
     cardInBasket();
 
-    // Сброс через 10 минут (по желанию можно убрать)
+    // Сброс через 10 минут
     setTimeout(() => {
         resetCardState();
         valueBasket();
+        cardInBasket();
     }, 600000);
 };
 
