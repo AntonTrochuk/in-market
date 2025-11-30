@@ -69,7 +69,7 @@
                     <h3>Новогодние скидки в IN MARKET</h3>
                     <p>успей заказать наушники со скидкой 20%</p>
                   </div>
-                  <div class="catalog-hero__image-block"></div>
+                  <div class="catalog-hero__image-block"><img src="img/catalog_img.png" width="350" height="400" alt="/"></div>
                 </div>
               </li>
             </ul>
@@ -78,9 +78,8 @@
         <section class="main-container__catalog catalog">
           <div class="catalog__container">
             <ul class="catalog__list">
-              <li class="catalog__item"><img src="img/catalog1.png" alt="/">
-                <h3>Наушники</h3>
-              </li>
+              <li class="catalog__item" data-category="наушники"><a href="headphones.html"><img src="img/catalog1.png" alt="/">
+                  <h3>Наушники</h3></a></li>
               <li class="catalog__item"><img src="img/catalog2.png" alt="/">
                 <h3>Колонки</h3>
               </li>
@@ -103,6 +102,33 @@
                 <h3>Powerbank</h3>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="main-container__basket basket">
+          <div class="basket__container">
+            <h2>Корзина</h2>
+            <div class="basket__content-block">
+              <ul class="basket__list card">
+                <li class="card__item card__item--basket" data-article="001"><img src="img/popular1@1x.jpg" srcset="img/popular1@1x.jpg 2x" alt="/">
+                  <div class="card__content card__content--basket">
+                    <div class="card__item-text card__item-text--basket">
+                      <h5>Внешний акумулятор</h5>
+                    </div>
+                    <div class="card__item-price card__item-price--basket"><span class="card__item-price-value">700р</span>
+                      <button class="card__item-price-button" type="button">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#shopping_basket"></use>
+                        </svg>
+                      </button>
+                      <div class="card__item-price-button-block button-click">
+                        <button class="button-click__less"><span>-</span></button><span class="button-click__text">0</span>
+                        <button class="button-click__more"><span>+</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>

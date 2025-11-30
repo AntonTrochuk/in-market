@@ -12,25 +12,27 @@
 
 .catalog-hero__content-block {
   width: 100%;
-  height: 300px;
   background-color: $color-background-dark-blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .catalog-hero__text-block {
   color: $color-text-white;
+  padding: 0 0 0 50px;
 
   h3 {
     margin: 0;
-    font-size: 30px;
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 25px;
   }
 }
 
 .catalog-hero__image-block {
   height: 100%;
   width: 500px;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
 }

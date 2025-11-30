@@ -3,9 +3,10 @@ include /components/mixins/mixins.pug
 section.main-container__catalog.catalog
     div.catalog__container
       ul.catalog__list
-        li.catalog__item
-          img(src="img/catalog1.png", alt="/")
-          h3 Наушники
+        li.catalog__item(data-category="наушники")
+          a(href="headphones.html")
+            img(src="img/catalog1.png", alt="/")
+            h3 Наушники
         li.catalog__item
           img(src="img/catalog2.png", alt="/")
           h3 Колонки

@@ -1,0 +1,17 @@
+extends /layouts/default.pug
+
+block vars
+  - var isHomePage = false
+  - var title = "Наушники"
+
+block header
+  include /components/base/header.pug
+
+block content
+  main.main-container__headphones
+    include /components/blocks/headphones-main.pug
+    include /components/blocks/basket.pug
+
+
+block footer
+  include /components/base/footer.pug
